@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6c63ff, #9f9fff);
+            color: #333;
+        }
+
+        .centered_form {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .form_box h1 {
+            margin: 0 0 20px 0;
+            font-size: 28px;
+            color: #6c63ff;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-align: left;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            border-color: #6c63ff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+        }
+
+        button {
+            background: #6c63ff;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #5145d3;
+        }
+
+        .form_box {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 20px;
+            }
+            .centered_form {
+                padding: 15px 20px;
+            }
+            .form_box h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="centered_form">
+        <div class="form_box">
+            <h1>Join Chatroom</h1>
+        </div>
+        <form action="/chat.html" method="GET">
+            <label for="display-name">Display Name</label>
+            <input id="display-name" name="displayName" type="text" placeholder="Enter your display name" required>
+            
+            <label for="room">Room</label>
+            <input id="room" name="room" type="text" placeholder="Enter room name" required>
+            
+            <button type="submit">Join</button>
+        </form>
+        
+    </div>
+</body>
+</html>
